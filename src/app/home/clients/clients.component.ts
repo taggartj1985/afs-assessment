@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import data from '../../../assets/mock_data_(3).json';
 
 @Component({
   selector: 'app-clients',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
+  listData = data;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(data);
   }
 
 }

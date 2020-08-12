@@ -15,5 +15,11 @@
     }
 ],
   "resolveJsonModule": true,
-  "esModuleInterop": true
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowJs": true
+}
 }

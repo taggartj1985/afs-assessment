@@ -9,9 +9,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_GB } from 'ng-zorro-antd/i18n';
+import { en_GB} from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 registerLocaleData(en);
 
@@ -19,14 +24,19 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HomeComponent,
-    // AuthComponent
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzLayoutModule,
+    NzTableModule,
+    NzBreadCrumbModule,
+    NzMenuModule,
+    NzIconModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_GB }],
   bootstrap: [AppComponent]

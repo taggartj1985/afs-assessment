@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../assets/mock_data_(3).json';
+import data from '../../../assets/mock_data_(3).json';
 
 @Component({
   selector: 'app-clients',

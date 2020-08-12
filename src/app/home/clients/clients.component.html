@@ -1,0 +1,14 @@
+<nz-table #basicTable [nzData]="listData">
+    <thead>  
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.id }}</td>
+        <td>{{ data.first_name }}</td>
+      </tr>
+    </tbody>
+</nz-table>

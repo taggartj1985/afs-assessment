@@ -9,7 +9,6 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [HomeComponent, ContractorsComponent, ClientsComponent],
@@ -21,7 +20,6 @@ import { BrowserModule } from '@angular/platform-browser';
     NzBreadCrumbModule,
     NzMenuModule,
     NzIconModule,
-    BrowserModule
   ],
   exports: [HomeComponent]
 })

@@ -3,12 +3,20 @@
       <tr>
         <th>ID</th>
         <th>First Name</th>
+        <th>Last Name</th>
+        <th>Company</th>
+        <th>UK Based</th>
+        <th>Gender</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let data of basicTable.data">
         <td>{{ data.id }}</td>
         <td>{{ data.first_name }}</td>
+        <td>{{ data.last_name }}</td>
+        <td>{{ data.company }}</td>
+        <td>{{ data.uk_based }}</td>
+        <td>{{ data.gender }}</td>
       </tr>
     </tbody>
 </nz-table>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { API, graphqlOperation } from 'aws-amplify';
+import * as queries from '../../../graphql/queries';
+
 @Component({
   selector: 'app-contractors',
   templateUrl: './contractors.component.html',
@@ -8,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContractorsComponent implements OnInit {
 
   constructor() { }
+
 
   ngOnInit(): void {
   }

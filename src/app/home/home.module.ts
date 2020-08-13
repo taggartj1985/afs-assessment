@@ -9,6 +9,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { AuthComponent } from '../auth/auth.component';
 
 @NgModule({
   declarations: [HomeComponent, ContractorsComponent, ClientsComponent],

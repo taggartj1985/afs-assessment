@@ -19,12 +19,17 @@ import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+
+Amplify.configure(awsconfig);
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeComponent,
     AuthComponent
   ],
   imports: [
@@ -37,7 +42,8 @@ registerLocaleData(en);
     NzTableModule,
     NzBreadCrumbModule,
     NzMenuModule,
-    NzIconModule
+    NzIconModule,
+    AmplifyUIAngularModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_GB }],
   bootstrap: [AppComponent]

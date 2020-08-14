@@ -4,6 +4,7 @@ import * as queries from '../../../graphql/queries';
 import * as mutations from '../../../graphql/mutations';
 import * as subscriptions from '../../../graphql/subscriptions';
 
+
 @Component({
   selector: 'app-contractors',
   templateUrl: './contractors.component.html',
@@ -18,6 +19,8 @@ export class ContractorsComponent implements OnInit {
     public async onCreate(){
       const todo = { name: "New Todo", description: "Hello"};
       await API.graphql(graphqlOperation(mutations.createTodo, {input: todo}))
+      console.log("working" + todo.name);
+      
     }
 
   async ngOnInit() {

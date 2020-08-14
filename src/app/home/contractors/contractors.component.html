@@ -1,10 +1,4 @@
-    <!-- <button (ngClick)="onCreate()">Add Todo</button> -->
-
-    <div>
-        <form autocomplete="off" (ngSubmit)="onCreate()">
-            <button type="submit">Add Todo</button>
-        </form>
-    </div>
+    <button (click)="onCreate()">Add Todo</button>
 
     <div *ngIf="todoList">
         <ul>

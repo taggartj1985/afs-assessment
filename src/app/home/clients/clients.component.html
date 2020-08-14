@@ -1,4 +1,4 @@
-<nz-table #basicTable [nzData]="listData">
+<!-- <nz-table #basicTable [nzData]="listData">
     <thead>  
       <tr>
         <th>ID</th>
@@ -10,13 +10,43 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of basicTable.data">
+      <tr *ngFor="let user of basicTable.data">
+        <td>{{ user.id }}</td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.company }}</td>
+        <td>{{ user.uk_based }}</td>
+        <td>{{ user.gender }}</td>
+      </tr>
+    </tbody>
+</nz-table> -->
+
+
+<nz-table #filterTable [nzData]="listOfData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th
+        *ngFor="let column of listOfColumns"
+        [nzSortOrder]="column.sortOrder"
+        [nzSortFn]="column.sortFn"
+        [nzSortDirections]="column.sortDirections"
+        [nzFilterMultiple]="column.filterMultiple"
+        [nzFilters]="column.listOfFilter"
+        [nzFilterFn]="column.filterFn"
+      >
+        {{ column.name }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of filterTable.data">
         <td>{{ data.id }}</td>
         <td>{{ data.first_name }}</td>
         <td>{{ data.last_name }}</td>
         <td>{{ data.company }}</td>
         <td>{{ data.uk_based }}</td>
         <td>{{ data.gender }}</td>
-      </tr>
-    </tbody>
+
+    </tr>
+  </tbody>
 </nz-table>

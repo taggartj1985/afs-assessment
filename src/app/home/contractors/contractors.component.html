@@ -1,2 +1,15 @@
-<!-- <button (click)="createTodo()">Add Todo</button> -->
+    <!-- <button (ngClick)="onCreate()">Add Todo</button> -->
 
+    <div>
+        <form autocomplete="off" (ngSubmit)="onCreate()">
+            <button type="submit">Add Todo</button>
+        </form>
+    </div>
+
+    <div *ngIf="todoList">
+        <ul>
+            <li *ngFor="let list of todoList.data.listTodos.items">
+                {{list.name}}, {{list.description}}
+            </li>
+        </ul>
+    </div>

@@ -14,12 +14,8 @@
       "path": "./tsconfig.spec.json"
     }
 ],
-  "resolveJsonModule": true,
-  "esModuleInterop": true,
-  "allowSyntheticDefaultImports": true,
-  
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "allowJs": true
-}
+  // "resolveJsonModule": true,
+  // "esModuleInterop": true,
+  // "allowSyntheticDefaultImports": true,
+
 }

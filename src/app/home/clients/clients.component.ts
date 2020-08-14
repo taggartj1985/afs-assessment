@@ -61,8 +61,19 @@ export class ClientsComponent implements OnInit {
         filterMultiple: false,
       },
       {name: 'Last Name'},
+
       {name: 'Company'},
-      {name: 'UK Based'},
+
+      {
+        name: 'UK Based',
+        filterMultiple: false,
+        listOfFilter: [
+        { text: 'yes', value: true},
+        { text: 'No', value: false},
+        ],
+        filterFn: (ukbased: boolean, item: DataItem) =>
+        item.uk_based === ukbased,
+      },
       {
         name: 'Gender',
         sortOrder: 'descend',

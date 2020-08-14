@@ -16,9 +16,8 @@ export class ContractorsComponent implements OnInit {
   constructor() { }
 
     public async onCreate(){
-      const todo = { name: "todo", description: "hello"};
+      const todo = { name: "New Todo", description: "Hello"};
       await API.graphql(graphqlOperation(mutations.createTodo, {input: todo}))
-      console.log('button pressed!' + todo.name);
     }
 
   async ngOnInit() {
